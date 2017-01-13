@@ -1,6 +1,6 @@
 "use strict";
 
 App.PersonsCollection = Backbone.Collection.extend({
-    localStorage: new Backbone.LocalStorage('PersonsCollection'),
+    localStorage: new Store('PersonsCollection'),
     model: App.PersonModel
 });
