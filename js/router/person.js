@@ -34,7 +34,8 @@ App.PersonRouter = Backbone.Router.extend({
     },
 
     edit: function(id) {
-
+        var view = new App.PersonEditView({ model: this.collection.get(id) });
+        this.$content.html(view.render().el);
     },
 
     delete: function(id) {

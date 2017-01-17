@@ -74,7 +74,38 @@
                                 <input type="text" name="occupation" id="input-occupation" class="form-control" maxlength="255">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary" id="button-person-add">Add Person</button>
+                                <button type="submit" class="btn btn-primary" id="button-person-add">Add</button>
+                                <a href="/#person/index" class="btn btn-default">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/template" id="template-person-edit">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="well">
+                        <div class="alert alert-danger hidden"></div>
+                        <form>
+                            <div class="form-group">
+                                <label for="input-first-name">First Name:</label>
+                                <input type="text" name="first_name" id="input-first-name" value="<%= person.firstName %>" class="form-control" maxlength="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-last-name">Last Name:</label>
+                                <input type="text" name="last_name" id="input-last-name" value="<%= person.lastName %>" class="form-control" maxlength="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-age">Age:</label>
+                                <input type="text" name="age" id="input-age" value="<%= person.age %>" class="form-control" maxlength="3">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-occupation">Occupation:</label>
+                                <input type="text" name="occupation" id="input-occupation" value="<%= person.occupation %>" class="form-control" maxlength="255">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" id="button-person-edit">Update</button>
                                 <a href="/#person/index" class="btn btn-default">Cancel</a>
                             </div>
                         </form>
@@ -94,6 +125,7 @@
         <script src="/js/collection/person.js"></script>
         <script src="/js/view/person/index.js"></script>
         <script src="/js/view/person/add.js"></script>
+        <script src="/js/view/person/edit.js"></script>
         <script src="/js/helpers.js"></script>
         <script src="/js/app.js"></script>
     </body>

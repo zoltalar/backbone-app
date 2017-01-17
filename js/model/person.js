@@ -14,16 +14,16 @@ App.PersonModel = Backbone.Model.extend({
     validate: function(attributes) {
         var errors = {};
 
-        if ( ! attributes.firstName) {
+        if ( ! attributes.firstName || s.isBlank(attributes.firstName)) {
             errors.firstName = 'Please enter your first name.';
         }
-        if ( ! attributes.lastName) {
+        if ( ! attributes.lastName || s.isBlank(attributes.lastName)) {
             errors.lastName = 'Please enter your last name.';
         }
-        if ( ! attributes.age) {
+        if ( ! attributes.age || s.isBlank(attributes.age)) {
             errors.age = 'Please enter your age.';
         }
-        if ( ! attributes.occupation) {
+        if ( ! attributes.occupation || s.isBlank(attributes.occupation)) {
             errors.occupation = 'Please enter your occupation.';
         }
 
